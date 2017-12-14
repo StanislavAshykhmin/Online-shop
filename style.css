@@ -2,6 +2,7 @@
 *******Header CSS******
 **************************/
 
+
 .header_top {
   background: none repeat scroll 0 0 #F0F0E9;
 }
@@ -136,6 +137,28 @@
   background-image: url(../images/home/searchicon.png);
   background-repeat: no-repeat;
   background-position: 130px;
+}
+
+
+
+/*************************
+*******Footer CSS******
+**************************/
+
+#footer {
+  background: #F0F0E9;
+}
+
+.footer-bottom {
+  background: #D6D6D0;
+  padding-top: 10px;
+}
+
+.footer-bottom p {
+  color: #363432;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin-left: 15px;
 }
 
 
