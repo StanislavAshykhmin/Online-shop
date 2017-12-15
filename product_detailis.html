@@ -50,6 +50,7 @@
                                     </li>                                   
                                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Корзина</a></li>
                                     <!--<li><a href="#"><i class="fa fa-user"></i> Аккаунт</a></li>-->
+                                    <li><a href="#"><i class="fa fa-lock"></i> Регистрация</a></li>
                                     <li><a href="#"><i class="fa fa-lock"></i> Вход</a></li>
                                     <!--<li><a href="#"><i class="fa fa-lock"></i> Выход</a></li>-->
                                 </ul>
@@ -90,6 +91,50 @@
         <section>
             <div class="container">
                 <div class="row">
+                    <div class="col-sm-3">
+                        <div class="left-sidebar">
+                            <h2>Каталог</h2>
+                            <div class="panel-group category-products">
+                                
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title"><a href="#">Категория</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                     <div class="col-sm-9 padding-right">
                         <div class="product-details"><!--product-details-->
                             <div class="row">
