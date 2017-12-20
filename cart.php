@@ -4,7 +4,7 @@
         <div class="container">
             <div class="breadcrumbs">
                 <ol class="breadcrumb">
-                  <li><a href="index.html">Главная</a></li>
+                  <li><a href="index.php">Главная</a></li>
                   <li class="active">Корзина</li>
                 </ol>
             </div>
@@ -23,10 +23,10 @@
                     <tbody>
                         <tr>
                             <td class="cart_product">
-                                <a href="product_detailis.html"><img src="logo-apple.jpg" alt=""></a>
+                                <a href="product_detailis.php"><img src="logo-apple.jpg" alt=""></a>
                             </td>
                             <td class="cart_description">
-                                <h4><a href="product_detailis.html">Apple</a></h4>
+                                <h4><a href="product_detailis.php">Apple</a></h4>
                                 <p>Код товара: 1089772</p>
                             </td>
                             <td class="cart_price">
@@ -49,10 +49,10 @@
 
                         <tr>
                             <td class="cart_product">
-                                <a href="product_detailis.html"><img src="logo-apple.jpg" alt=""></a>
+                                <a href="product_detailis.php"><img src="logo-apple.jpg" alt=""></a>
                             </td>
                             <td class="cart_description">
-                                <h4><a href="product_detailis.html">Apple</a></h4>
+                                <h4><a href="product_detailis.php">Apple</a></h4>
                                 <p>Код товара: 1089772</p>
                             </td>
                             <td class="cart_price">
@@ -74,10 +74,10 @@
                         </tr>
                         <tr>
                             <td class="cart_product">
-                                <a href="product_detailis.html"><img src="logo-apple.jpg" alt=""></a>
+                                <a href="product_detailis.php"><img src="logo-apple.jpg" alt=""></a>
                             </td>
                             <td class="cart_description">
-                                <h4><a href="product_detailis.html">Apple</a></h4>
+                                <h4><a href="product_detailis.php">Apple</a></h4>
                                 <p>Код товара: 1089772</p>
                             </td>
                             <td class="cart_price">
