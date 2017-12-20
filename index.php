@@ -1,4 +1,5 @@
 <?php include 'header.php' ?>
+<?php include 'product_list.php' ?>
 
         <section>
             <div class="container">
@@ -50,80 +51,20 @@
                     <div class="col-sm-9 padding-right">
                         <div class="features_items"><!--features_items-->
                             <h2 class="title text-center">Последние товары</h2>
+                            <?php foreach ($product_list as $list): ?>
                             <div class="col-sm-4">
                                 <div class="product-image-wrapper">
                                     <div class="single-products">
                                         <div class="productinfo text-center">
-                                            <a href="product_detailis.html"><img src="logo-apple.jpg" alt="" />
-                                            <h2>99$</h2>
-                                            <p>Apple</p></a>
+                                            <a href="product_detailis.php"><img src="logo-apple.jpg" alt="" />
+                                            <h2><?php echo $list['price'];?>$</h2>
+                                            <p>Apple <?php echo $list['product'];?></p></a>
                                             <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="product_detailis.html"><img src="logo-apple.jpg" alt="" />
-                                            <h2>99$</h2>
-                                            <p>Apple</p></a>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="product_detailis.html"><img src="logo-apple.jpg" alt="" />
-                                            <h2>99$</h2>
-                                            <p>Apple</p></a>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="product_detailis.html"><img src="logo-apple.jpg" alt="" />
-                                            <h2>99$</h2>
-                                            <p>Apple</p></a>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        </div>
-                                        <img src="images/home/new.png" class="new" alt="" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="product_detailis.html"><img src="logo-apple.jpg" alt="" />
-                                            <h2>99$</h2>
-                                            <p>Apple</p></a>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <a href="product_detailis.html"><img src="logo-apple.jpg" alt="" />
-                                            <h2>99$</h2>
-                                            <p>Apple</p></a>
-                                            <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <?php endforeach?>
                         </div><!--features_items-->
 
                         <div class="recommended_items"><!--recommended_items-->
@@ -136,7 +77,7 @@
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <a href="product_detailis.html">
+                                                        <a href="product_detailis.php">
                                                         <img src="logo-apple.jpg" alt="" />
                                                         <h2>99$</h2>
                                                         <p>Apple</p></a>
@@ -150,7 +91,7 @@
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <a href="product_detailis.html">
+                                                        <a href="product_detailis.php">
                                                         <img src="logo-apple.jpg" alt="" />
                                                         <h2>99$</h2>
                                                         <p>Apple</p></a>
@@ -163,7 +104,7 @@
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <a href="product_detailis.html">
+                                                        <a href="product_detailis.php">
                                                         <img src="logo-apple.jpg" alt="" />
                                                         <h2>99$</h2>
                                                         <p>Apple</p></a>
@@ -178,7 +119,7 @@
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <a href="product_detailis.html">
+                                                        <a href="product_detailis.php">
                                                         <img src="logo-apple.jpg" alt="" />
                                                         <h2>99$</h2>
                                                         <p>Apple</p></a>
@@ -191,7 +132,7 @@
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <a href="product_detailis.html">
+                                                        <a href="product_detailis.php">
                                                         <img src="logo-apple.jpg" alt="" />
                                                         <h2>99$</h2>
                                                         <p>Apple</p></a>
@@ -204,7 +145,7 @@
                                             <div class="product-image-wrapper">
                                                 <div class="single-products">
                                                     <div class="productinfo text-center">
-                                                        <a href="product_detailis.html">
+                                                        <a href="product_detailis.php">
                                                         <img src="logo-apple.jpg" alt="" />
                                                         <h2>99$</h2>
                                                         <p>Apple</p></a>
