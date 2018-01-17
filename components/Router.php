@@ -1,5 +1,7 @@
 <?php
 
+use Controllers\UserController;
+
 class Router
 {
 
@@ -9,7 +11,7 @@ class Router
     {
         $routesPath = ROOT. '/config/routes.php';
         $this->routes = include($routesPath);
-    }
+   }
 
     /**
      * Returns request string
@@ -49,22 +51,24 @@ class Router
                 $segments = explode('/', $internalRoute);
 
                 $controllerName = array_shift($segments).'Controller';// Получаем имя контроллера
-                $controllerName = ucfirst($controllerName);
+                $controllerName = 'Controllers\\' . ucfirst($controllerName);
 
                 $actionName = 'action'.ucfirst(array_shift($segments));// Получаем имя action
 
                 $parameters  =  $segments;
-
+               
                 // Подключить файл класса-контроллера
-                $controllerFile =  ROOT  . '/controllers/' .
-                    $controllerName . '.php';
+//                $controllerFile =  ROOT  . '/controllers/' .
+//                    $controllerName . '.php';
 
-                if (file_exists($controllerFile))  {
-                    include_once ($controllerFile);
-                }
+//                if (file_exists($controllerFile))  {
+//                    include_once ($controllerFile);
+//                }
 
 
                 // Создать объект, вызвать метод (т.е.  action)
+                //die($controllerName);
+
                 $controllerObject = new $controllerName;
                 $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
                 if ($result !=null) {
