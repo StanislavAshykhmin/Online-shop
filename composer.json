@@ -1,0 +1,19 @@
+{
+    "name": "phpstudent/online-shop",
+    "description": "composer",
+    "authors": [
+        {
+            "name": "Stanislav Ashykhmin",
+            "email": "ashykhminstanislav@gmail.com"
+        }
+    ],
+    "require": {},
+    
+  "autoload": {
+    "psr-4": {
+      "Controllers\\":"controllers/",
+      "Models\\":"models/"
+    }
+  }
+
+}
