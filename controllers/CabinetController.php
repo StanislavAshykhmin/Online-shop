@@ -1,5 +1,7 @@
 <?php
-include_once ROOT . '/models/User.php';
+
+
+use Models\User;
 
 class CabinetController
 {
