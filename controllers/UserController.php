@@ -4,10 +4,52 @@ namespace Controllers;
 
 
 use Models\User;
+use Components\Validator;
 
 
 class UserController
 {
+
+    public function actionRegister()
+    {
+        $name = '';
+        $email = '';
+        $password = '';
+        $result = false;
+
+        if (isset($_POST['submit'])) {
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+
+        }
+
+        $errors = false;
+
+        // Валидация полей
+        if (!Validator::checkName($name)) {
+            $errors[] = 'Имя не должно быть короче 2-х символов';
+        }
+        if (!Validator::checkEmail($email)) {
+            $errors[] = 'Неправильный email';
+        }
+        if (!Validator::checkPassword($password)) {
+            $errors[] = 'Пароль не должен быть короче 8-и символов';
+        }
+        if (User::checkEmailExists($email)) {
+            $errors[] = 'Такой email уже используется';
+        }
+        if ($errors ==  false){
+            $result = User::register($name, $email,  $password);
+        }
+
+        require_once (ROOT . '/views/user/register.php');
+
+        return true;
+
+    }
+
+
     public function actionLogin()
     {
         $email = '';
@@ -20,10 +62,10 @@ class UserController
             $errors = false;
 
             // Валидация полей
-            if (!User::checkEmail($email)) {
+            if (!Validator::checkEmail($email)) {
                 $errors[] = 'Неправильный email';
             }
-            if (!User::checkPassword($password)) {
+            if (!Validator::checkPassword($password)) {
                 $errors[] = 'Пароль не должен быть короче 4-ех символов';
             }
             // Проверяем существует ли пользователь
