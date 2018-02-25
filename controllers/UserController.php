@@ -93,9 +93,8 @@ class UserController
     {
         session_start();
         unset($_SESSION["user"]);
-        session_destroy();
-        header("Location: /user/login");
-        require_once(ROOT . '/views/cabinet/index.php');
+        header("Location: /");
+//        require_once(ROOT . '/views/cabinet/index.php');
     }
 
 
