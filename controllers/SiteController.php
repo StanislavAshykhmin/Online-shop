@@ -3,6 +3,7 @@
 
 namespace Controllers;
 
+use components\Validator;
 use Models\Category;
 use Models\Product;
 
@@ -23,4 +24,37 @@ class SiteController
         return true;
 
     }
+
+    public function actionContacts(){
+
+        $userEmail = '';
+        $userText = '';
+        $result = false;
+
+        if (isset($_POST['submit'])){
+
+            $userEmail = $_POST['userEmail'];
+            $userText = $_POST['userText'];
+
+            $errors  = false;
+
+//            if (!Validator::checkEmail($userEmail)){
+//                $errors[] = 'Неправильный email';
+//            }
+//                 Решить проблему
+
+            
+           if ($errors == false){
+               $adminEmail = 'testlocalhost1234@gmail.com';
+               $message = "Текст: {$userText}. От {$userEmail}";
+               $subject = 'Тема письма';
+               $result = mail($adminEmail, $subject, $message);
+               $result =  true;
+           }
+        }
+
+        require_once (ROOT. '/views/site/contact.php');
+        return true;
+    }
+
 }
