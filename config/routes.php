@@ -15,6 +15,7 @@
         'user/logout' => 'user/logout',
         'cabinet/edit' => 'cabinet/edit',
         'cabinet' => 'cabinet/index',
+        'admin' => 'admin/index',
         'contacts' => 'site/contacts',
         '' => 'site/index',
     );
