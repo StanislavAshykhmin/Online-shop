@@ -29,7 +29,15 @@ class Cart
 
         return self::countItems();
     }
-    
+
+    public static function deleteProduct($id){
+        $productInCart = self::getProducts();
+
+        unset($productInCart[$id]);
+
+        $_SESSION['products'] = $productInCart;
+
+    }
 
 
     public static function countItems()
