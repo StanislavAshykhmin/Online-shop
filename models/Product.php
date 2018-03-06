@@ -112,6 +112,7 @@ class Product
             $products[$i]['code'] = $row['code'];
             $products[$i]['name'] = $row['name'];
             $products[$i]['price'] = $row['price'];
+            $i++;
         }
         return $products;
     }
