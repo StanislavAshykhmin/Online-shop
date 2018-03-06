@@ -3,7 +3,7 @@
 
 namespace Controllers;
 
-use components\Validator;
+use Components\Validator;
 use Models\Category;
 use Models\Product;
 
@@ -38,12 +38,12 @@ class SiteController
 
             $errors  = false;
 
-//            if (!Validator::checkEmail($userEmail)){
-//                $errors[] = 'Неправильный email';
-//            }
+            if (!Validator::checkEmail($userEmail)){
+                $errors[] = 'Неправильный email';
+            }
 //                 Решить проблему
 
-            
+
            if ($errors == false){
                $adminEmail = 'testlocalhost1234@gmail.com';
                $message = "Текст: {$userText}. От {$userEmail}";
