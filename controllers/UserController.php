@@ -22,7 +22,7 @@ class UserController
             $email = $_POST['email'];
             $password = $_POST['password'];
 
-        }
+
 
         $errors = false;
 
@@ -42,10 +42,11 @@ class UserController
         if ($errors ==  false){
             $result = User::register($name, $email,  $password);
         }
-
+        }
         require_once (ROOT . '/views/user/register.php');
 
         return true;
+
 
     }
 
@@ -66,7 +67,7 @@ class UserController
                 $errors[] = 'Неправильный email';
             }
             if (!Validator::checkPassword($password)) {
-                $errors[] = 'Пароль не должен быть короче 4-ех символов';
+                $errors[] = 'Пароль не должен быть короче 8-и символов';
             }
             // Проверяем существует ли пользователь
             $userId = User::checkUserData($email, $password);
