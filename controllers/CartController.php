@@ -27,6 +27,15 @@ class CartController
 
 
     }
+    public function actionDelete($id){
+
+        Cart::deleteProduct($id);
+
+
+        header("Location: /cart");
+
+
+    }
     
     public function actionAddAjax($id){
         echo Cart::addProduct($id);
@@ -45,6 +54,7 @@ class CartController
             $products = Product::getProductsByIds($productsIds);
 
             $totalPrice = Cart::getTotalPrice($products);
+
         }
         require_once (ROOT. '/views/cart/index.php');
 
