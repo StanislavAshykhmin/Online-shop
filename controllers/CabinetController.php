@@ -21,7 +21,7 @@ class CabinetController
     public function actionEdit()
     {
         $userId = User::checkLogged();
-        
+
         $user = User::getUserById($userId);
 
         $name = $user['name'];
@@ -33,7 +33,7 @@ class CabinetController
             $name = $_POST['name'];
             $password = $_POST['password'];
 
-        }
+
 
         $errors = false;
 
@@ -47,10 +47,12 @@ class CabinetController
         if ($errors ==  false){
             $result = User::edit($userId, $name, $password);
         }
+        }
 
         require_once (ROOT . '/views/cabinet/edit.php');
 
         return true;
 
     }
+
 }
