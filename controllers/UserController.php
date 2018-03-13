@@ -12,49 +12,48 @@ class UserController
 
     public function actionRegister()
     {
-        $name = '';
-        $email = '';
-        $password = '';
+        $name = false;
+        $email = false;
+        $password = false;
+        $role = false;
         $result = false;
 
         if (isset($_POST['submit'])) {
+            $role = "user";
+
             $name = $_POST['name'];
             $email = $_POST['email'];
             $password = $_POST['password'];
 
+            $errors = false;
 
+            if (!Validator::checkName($name)) {
+                $errors[] = 'Имя не должно быть короче 2-х символов';
+            }
+            if (!Validator::checkEmail($email)) {
+                $errors[] = 'Неправильный email';
+            }
+            if (!Validator::checkPassword($password)) {
+                $errors[] = 'Пароль не должен быть короче 8-и символов';
+            }
+            if (User::checkEmailExists($email)) {
+                $errors[] = 'Такой email уже используется';
+            }
+            if ($errors == false) {
 
-        $errors = false;
+                $result = User::register($name, $email, $password, $role);
+            }
+        }
 
-        // Валидация полей
-        if (!Validator::checkName($name)) {
-            $errors[] = 'Имя не должно быть короче 2-х символов';
-        }
-        if (!Validator::checkEmail($email)) {
-            $errors[] = 'Неправильный email';
-        }
-        if (!Validator::checkPassword($password)) {
-            $errors[] = 'Пароль не должен быть короче 8-и символов';
-        }
-        if (User::checkEmailExists($email)) {
-            $errors[] = 'Такой email уже используется';
-        }
-        if ($errors ==  false){
-            $result = User::register($name, $email,  $password);
-        }
-        }
-        require_once (ROOT . '/views/user/register.php');
-
+        require_once(ROOT . '/views/user/register.php');
         return true;
-
-
     }
 
 
     public function actionLogin()
     {
-        $email = '';
-        $password = '';
+        $email = false;
+        $password = false;
 
         if (isset($_POST['submit'])) {
             $email = $_POST['email'];
