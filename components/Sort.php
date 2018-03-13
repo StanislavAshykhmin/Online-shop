@@ -36,7 +36,7 @@ class Sort
         return $sortList;
     }
 
-
+//fixed
     public static function sortCategory($categoryId = false, $page = 1, $sort)
     {
         if ($categoryId) {
