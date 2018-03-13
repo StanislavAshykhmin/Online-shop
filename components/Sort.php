@@ -18,7 +18,7 @@ class Sort
 
         $sortList = array();
 
-        $result = $db->query('SELECT id, name, price, image, is_new FROM product '
+        $result = $db->query('SELECT id, name, price, is_new FROM product '
             . 'WHERE status = "1"'
             . 'ORDER BY ' . $sort);
 
@@ -28,7 +28,6 @@ class Sort
         while ($row = $result->fetch()) {
             $sortList[$i]['id'] = $row['id'];
             $sortList[$i]['name'] = $row['name'];
-            $sortList[$i]['image'] = $row['image'];
             $sortList[$i]['price'] = $row['price'];
             $sortList[$i]['is_new'] = $row['is_new'];
             $i++;
@@ -47,7 +46,7 @@ class Sort
 
             $db = \Db::getConnection();
             $products = array();
-            $result = $db->query("SELECT id, name, price, image, is_new FROM product "
+            $result = $db->query("SELECT id, name, price, is_new FROM product "
                 . "WHERE status = '1' AND category_id = '$categoryId' "
                 . "ORDER BY ". $sort
                 . " LIMIT ".self::SHOW_BY_DEFAULT
@@ -58,7 +57,6 @@ class Sort
             while ($row = $result->fetch()) {
                 $products[$i]['id'] = $row['id'];
                 $products[$i]['name'] = $row['name'];
-                $products[$i]['image'] = $row['image'];
                 $products[$i]['price'] = $row['price'];
                 $products[$i]['is_new'] = $row['is_new'];
                 $i++;
