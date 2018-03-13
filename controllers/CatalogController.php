@@ -56,10 +56,10 @@ class CatalogController
 
 
 
-        if (isset($_POST['id_ASC'])){unset($sort); $sort = 'id ASC';}
-        elseif (isset($_POST['id_DESC'])){unset($sort);$sort = 'id DESC';}
-        elseif (isset($_POST['price_ASC'])){unset($sort);$sort = 'price ASC';}
-        elseif (isset($_POST['price_DESC'])){unset($sort);$sort = 'price DESC';}
+        if (isset($_POST['id_ASC'])){$sort = 'id ASC';}
+        elseif (isset($_POST['id_DESC'])){$sort = 'id DESC';}
+        elseif (isset($_POST['price_ASC'])){$sort = 'price ASC';}
+        elseif (isset($_POST['price_DESC'])){$sort = 'price DESC';}
 
 
 
