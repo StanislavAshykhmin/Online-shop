@@ -74,15 +74,30 @@ class Order
 
         $result = $db->prepare($sql);
         $result->bindParam(':id', $id, \PDO::PARAM_INT);
+        $result->setFetchMode(\PDO::FETCH_ASSOC);
+
+        $result->execute();
+
+        return $result->fetch();
+
+    }
+
+    public static function getOrderByUserId($userId){
+        $db = \Db::getConnection();
+
+        $sql = 'SELECT * FROM product_order WHERE user_id = :user_id';
+
+        $result = $db->prepare($sql);
+        $result->bindParam(':user_id', $userId, \PDO::PARAM_INT);
 
         $result->setFetchMode(\PDO::FETCH_ASSOC);
 
         $result->execute();
 
         return $result->fetch();
+        
     }
 
-    
     public static function deleteOrderById($id)
     {
         $db = \Db::getConnection();
