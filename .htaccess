@@ -17,4 +17,4 @@ RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [L]
 RewriteRule ^.*$ index.php [L]
-
+php_value error_log /var/www/Online-shop/log/errors.log
