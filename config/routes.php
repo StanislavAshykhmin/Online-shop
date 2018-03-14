@@ -10,10 +10,12 @@
         'cart/add/([0-9]+)' => 'cart/add/$1',
         'cart/addAjax/([0-9]+)' => 'cart/addAjax/$1',
         'cart' => 'cart/index',
+        'search' => 'search/index',
         'user/register' => 'user/register',
         'user/login' => 'user/login',
         'user/logout' => 'user/logout',
         'cabinet/edit' => 'cabinet/edit',
+        'cabinet/history' => 'cabinet/history',
         'cabinet' => 'cabinet/index',
         // Управление товарами:
         'admin/product/create' => 'adminProduct/create',
@@ -33,5 +35,6 @@
         // Админпанель:
         'admin' => 'admin/index',
         'contacts' => 'site/contacts',
+        'about' => 'site/about',
         '' => 'site/index',
     );
