@@ -19,11 +19,27 @@ class CatalogController
 
 
         $sort ='id DESC';
+        $text = 'Дата по убыванию';
 
-            if (isset($_POST['id_ASC'])){$sort = 'id ASC';}
-            elseif (isset($_POST['id_DESC'])){$sort = 'id DESC';}
-            elseif (isset($_POST['price_ASC'])){$sort = 'price ASC';}
-            elseif (isset($_POST['price_DESC'])){$sort = 'price DESC';}
+//            if (isset($_POST['id_ASC'])){$sort = 'id ASC';}
+//            elseif (isset($_POST['id_DESC'])){$sort = 'id DESC';}
+//            elseif (isset($_POST['price_ASC'])){$sort = 'price ASC';}
+//            elseif (isset($_POST['price_DESC'])){$sort = 'price DESC';}
+        if (isset($_POST['submit'])){
+            $res =  $_POST['sort'];
+            if ($res == 'id_ASC'){
+                $sort = 'id ASC';
+                $text = 'Дата по возростанию';}
+            elseif ($res  == 'id_DESC'){
+                $sort = 'id DESC';
+                $text = 'Дата по убыванию';}
+            elseif ($res  == 'price_ASC'){
+                $sort = 'price ASC';
+                $text = 'Цена по возростанию';}
+            elseif ($res  == 'price_DESC'){
+                $sort = 'price DESC';
+                $text = 'Цена по убыванию';}
+        }
 
         $latestProducts = array();
         $latestProducts = Sort::sort($sort);
@@ -53,13 +69,27 @@ class CatalogController
         $categories = Category::getCategoriesList();
 
         $sort ='id DESC';
+        $text = 'Дата по убыванию';
 
-
-
-        if (isset($_POST['id_ASC'])){$sort = 'id ASC';}
-        elseif (isset($_POST['id_DESC'])){$sort = 'id DESC';}
-        elseif (isset($_POST['price_ASC'])){$sort = 'price ASC';}
-        elseif (isset($_POST['price_DESC'])){$sort = 'price DESC';}
+//            if (isset($_POST['id_ASC'])){$sort = 'id ASC';}
+//            elseif (isset($_POST['id_DESC'])){$sort = 'id DESC';}
+//            elseif (isset($_POST['price_ASC'])){$sort = 'price ASC';}
+//            elseif (isset($_POST['price_DESC'])){$sort = 'price DESC';}
+        if (isset($_POST['submit'])){
+            $res =  $_POST['sort'];
+            if ($res == 'id_ASC'){
+                $sort = 'id ASC';
+                $text = 'Дата по возростанию';}
+            elseif ($res  == 'id_DESC'){
+                $sort = 'id DESC';
+                $text = 'Дата по убыванию';}
+            elseif ($res  == 'price_ASC'){
+                $sort = 'price ASC';
+                $text = 'Цена по возростанию';}
+            elseif ($res  == 'price_DESC'){
+                $sort = 'price DESC';
+                $text = 'Цена по убыванию';}
+        }
 
 
 
