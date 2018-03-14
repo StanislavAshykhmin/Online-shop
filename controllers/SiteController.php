@@ -4,6 +4,7 @@
 namespace Controllers;
 
 use Components\Validator;
+
 use Models\Category;
 use Models\Product;
 
@@ -14,18 +15,21 @@ class SiteController
 
         $categories = array();
         $categories = Category::getCategoriesList();
+        
 
         $latestProducts = array();
         $latestProducts = Product::getLatestProducts(6);
 
         $sliderProducts = Product::getRecommendedProducts();
-
-
         require_once (ROOT  .  '/views/site/index.php');
-
+        
+        
+        
         return true;
 
     }
+    
+    
 
     public function actionContacts(){
 
@@ -56,6 +60,12 @@ class SiteController
         }
 
         require_once (ROOT. '/views/site/contact.php');
+        return true;
+    }
+    public function actionAbout()
+    {
+        
+        require_once(ROOT . '/views/site/about.php');
         return true;
     }
 
