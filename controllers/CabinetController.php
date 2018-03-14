@@ -3,6 +3,9 @@ namespace Controllers;
 
 use Models\User;
 use Components\Validator;
+use Models\Product;
+use Models\Order;
+
 
 class CabinetController
 {
@@ -53,6 +56,20 @@ class CabinetController
 
         return true;
 
+    }
+    
+    public function actionHistory(){
+        $userId = User::checkLogged();
+        
+        $order = Order::getOrderByUserId($userId);
+
+        $productsQuantity = json_decode($order['products'], true);
+
+        $productsIds = array_keys($productsQuantity);
+        $products = Product::getProductsByIds($productsIds);
+
+        require_once(ROOT . '/views/cabinet/history.php');
+        return true;
     }
 
 }
