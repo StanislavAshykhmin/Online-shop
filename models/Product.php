@@ -36,6 +36,30 @@ class Product
         return $productsList;
     }
 
+    public static function getSearchProducts($text){
+
+        $db = \Db::getConnection();
+
+        $productsList = array();
+
+        $result = $db->query('SELECT id, name, price, is_new FROM product '
+            . 'WHERE name LIKE "%' .$text. '%"'
+            . 'ORDER BY id DESC ');
+
+        $i = 0;
+
+
+        while ($row = $result->fetch()) {
+            $productsList[$i]['id'] = $row['id'];
+            $productsList[$i]['name'] = $row['name'];
+            $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['is_new'] = $row['is_new'];
+            $i++;
+        }
+
+        return $productsList;
+    }
+
     public static function getProductsList()
     {
         $db = \Db::getConnection();
@@ -218,4 +242,5 @@ class Product
         // Возвращаем путь изображения-пустышки
         return $path . $noImage;
     }
+
 }
