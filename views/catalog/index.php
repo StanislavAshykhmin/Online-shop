@@ -26,7 +26,7 @@ use Models\Product;
                                     <div class="custom-select mr-sm-6" id="inlineFormCustomSelect">
                                         <label class="mr-sm-2" for="inlineFormCustomSelect">Отсортировать по:</label>
                                         <select name="sort">
-                                            <option  value = "id_ASC">Дата по возростанию</option>
+                                            <option  value = "id_ASC">Дата по возростанию </option>
                                             <option   value = "id_DESC">Дата по убыванию</option>
                                             <option  value = "price_ASC">Цена по возростанию</option>
                                             <option  value = "price_DESC">Цена по убыванию</option>
