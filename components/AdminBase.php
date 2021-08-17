@@ -27,7 +27,7 @@ abstract class AdminBase
         if ($user['role'] == 'admin') {
             echo "<li><a href=\"/admin\"><i class=\"fa fa-edit\"></i> Админпанель</a></li>";
         }
-        return false;
+        return true;
     }
 
 }
